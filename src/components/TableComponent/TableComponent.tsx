@@ -71,7 +71,7 @@ const TableComponent: React.FC<TableProps> = ({ isDarkMode, uploadedFiles }) => 
                       Select Tags
                     </button>
                     {popoverIndex === index && (
-                      <div className="absolute z-10 mt-2 w-48 bg-white dark:bg-gray-700 shadow-lg rounded-md">
+                      <div className="fixed top-50 z-50 mt-2 w-48 bg-white dark:bg-gray-700 shadow-lg rounded-md">
                         {tags.map(tag => (
                           <div
                             key={tag}

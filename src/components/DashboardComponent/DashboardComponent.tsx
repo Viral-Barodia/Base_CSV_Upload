@@ -69,11 +69,11 @@ const DashboardComponent: React.FC<DashboardProps> = ({ isDarkMode }) => {
               </button>
             </div>
           </div>
-            {uploadedFiles.length > 0 && (
-              <div className="flex-1 p-6 w-full overflow-y-auto" style={{ maxHeight: 'calc(100vh - 400px)' }}>
-                <TableComponent isDarkMode={isDarkMode} uploadedFiles={uploadedFiles} />
-              </div>
-            )}
+          {uploadedFiles.length > 0 && (
+            <div className="flex-1 p-6 w-full" style={{ maxHeight: 'calc(100vh - 400px)' }}>
+              <TableComponent isDarkMode={isDarkMode} uploadedFiles={uploadedFiles} />
+            </div>
+          )}
         </div>
       </div>
     </div>

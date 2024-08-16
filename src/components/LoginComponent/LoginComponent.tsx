@@ -47,9 +47,10 @@ const LoginComponent: React.FC = () => {
 //   https://stackoverflow.com/questions/68438293/the-given-origin-is-not-allowed-for-the-given-client-id-gsi
   return (
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
-      <div className={`flex py-2 px-2 h-screen ${isDarkMode ? 'dark bg-gray-900' : 'bg-white'}`}>
+      {/* Parent Container */}
+      <div className={`flex flex-col md:flex-row py-2 px-2 h-screen ${isDarkMode ? 'dark bg-gray-900' : 'bg-white'}`}>
         {/* Left Section */}
-        <div className="outer-left flex-1 flex items-center justify-center bg-blue-600 p-10 rounded-lg">
+        <div className="outer-left flex-1 flex items-center justify-center bg-blue-600 p-10 rounded-lg md:flex hidden">
           <div className="inner-left relative w-full max-w-2xl h-[95%] text-white rounded-md p-10 flex flex-col justify-between">
             <div>
               <div className="company-logo flex items-center w-36 bg-white rounded-full px-4 py-2 mb-6">
@@ -81,7 +82,7 @@ const LoginComponent: React.FC = () => {
         </div>
 
         {/* Right Section */}
-        <div className={`flex-1 flex flex-col justify-center p-10`}>
+        <div className={`flex-1 flex flex-col justify-center p-10 md:p-10`}>
           <div className="w-full max-w-md mx-auto">
             <h2 className={`font-montserrat text-2xl font-semibold mb-6 text-gray-800 ${isDarkMode ? 'text-white' : 'text-dark'}`}>Sign In</h2>
             <p className={`text-sm text-gray-600 dark:text-gray-400 mb-8 font-lato ${isDarkMode ? 'text-white' : 'text-dark'}`}>Sign in to your account</p>
