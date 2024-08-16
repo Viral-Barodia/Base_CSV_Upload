@@ -13,7 +13,7 @@ interface TableProps {
 const headers = ['SI No.', 'Links', 'Prefix', 'Add Tags', 'Selected Tags'];
 const tags = ['Tag 1', 'Tag 2', 'Tag 3', 'Tag 4', 'Tag 5'];
 
-const TableComponent: React.FC<TableProps> = ({ isDarkMode, uploadedFiles }) => {
+const TableComponent: React.FC<TableProps> = ({ uploadedFiles }) => {
   const [selectedTags, setSelectedTags] = useState<{ [key: number]: string[] }>({});
   const [popoverIndex, setPopoverIndex] = useState<number | null>(null);
 
