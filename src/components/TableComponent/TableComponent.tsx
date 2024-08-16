@@ -22,7 +22,7 @@ const TableComponent: React.FC<TableProps> = ({ uploadedFiles }) => {
       const newTags = prev[index] ? [...prev[index], tag] : [tag];
       return { ...prev, [index]: newTags };
     });
-    setPopoverIndex(null); // Close the popover after adding a tag
+    setPopoverIndex(null);
   };
 
   const handleRemoveTag = (index: number, tagToRemove: string) => {
@@ -37,7 +37,6 @@ const TableComponent: React.FC<TableProps> = ({ uploadedFiles }) => {
       <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Uploads</h2>
       <div className="overflow-x-auto">
         <table className="w-full bg-white dark:bg-black rounded-md shadow overflow-hidden">
-          {/* Render Header Row */}
           <thead className="bg-gray-200 dark:bg-gray-700">
             <tr>
               {headers.map((header, index) => (

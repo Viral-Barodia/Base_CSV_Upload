@@ -5,7 +5,7 @@ import { FaGithub, FaApple, FaTwitter, FaLinkedin, FaDiscord } from 'react-icons
 import './LoginComponent.scss';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import {jwtDecode} from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 const LoginComponent: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -44,10 +44,8 @@ const LoginComponent: React.FC = () => {
   };
   const [error, setError] = useState<string | null>(null);
 
-//   https://stackoverflow.com/questions/68438293/the-given-origin-is-not-allowed-for-the-given-client-id-gsi
   return (
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
-      {/* Parent Container */}
       <div className={`flex flex-col md:flex-row py-2 px-2 h-screen ${isDarkMode ? 'dark bg-gray-900' : 'bg-white'}`}>
         {/* Left Section */}
         <div className="outer-left flex-1 flex items-center justify-center bg-blue-600 p-10 rounded-lg md:flex hidden">
